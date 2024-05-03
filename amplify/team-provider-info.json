@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-mancommdashboardproj-dev-393d0-authRole",
+      "UnauthRoleArn": "arn:aws:iam::637423515636:role/amplify-mancommdashboardproj-dev-393d0-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::637423515636:role/amplify-mancommdashboardproj-dev-393d0-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-mancommdashboardproj-dev-393d0-deployment",
+      "UnauthRoleName": "amplify-mancommdashboardproj-dev-393d0-unauthRole",
+      "StackName": "amplify-mancommdashboardproj-dev-393d0",
+      "StackId": "arn:aws:cloudformation:us-west-2:637423515636:stack/amplify-mancommdashboardproj-dev-393d0/594959c0-08ef-11ef-8893-02a85a875903",
+      "AmplifyAppId": "d2rphyo7iilom1"
+    }
+  }
+}
