@@ -1,6 +1,5 @@
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
-import Typography from '@mui/material/Typography';
 
 import Iconify from 'src/components/iconify';
 
@@ -16,10 +15,7 @@ import AppTrafficBySite from '../app-traffic-by-site';
 export default function AppView() {
   return (
     <Container maxWidth="xl">
-      <Typography variant="h4" sx={{ mb: 5 }}>
-        Hi, Welcome back 👋
-      </Typography>
-
+   
       <Grid container spacing={3}>
         <Grid xs={12} sm={6} md={3}>
           <AppWidgetSummary
@@ -51,7 +47,7 @@ export default function AppView() {
         <Grid xs={12} sm={6} md={3}>
           <AppWidgetSummary
             title="Average Requests Received"
-            total={234}
+            total={2.3}
             color="error"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_message.png" />}
           />
