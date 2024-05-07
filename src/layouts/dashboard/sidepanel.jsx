@@ -1,29 +1,26 @@
 import PropTypes from 'prop-types';
 
 import Box from '@mui/material/Box';
-import Grid from '@mui/material/Unstable_Grid2';
+import Grid from '@mui/material/Grid';
 
 import { useResponsive } from 'src/hooks/use-responsive';
 
 import { NAV, MAIN } from './config-layout';
 import AppCurrentVisits from '../../sections/overview/app-current-visits';
 
-
-// ----------------------------------------------------------------------
-
-
 export default function SidePanel({ children, sx, ...other }) {
   const lgUp = useResponsive('up', 'lg');
 
   return (
     <Box
-      component="nav"
+      component="main"
       sx={{
         flexGrow: 1,
         minHeight: 1,
         display: 'flex',
         flexDirection: 'column',
         py: 0,
+        height: '100vh', // Set height to 100vh
         ...(lgUp && {
           px: 2,
           py: 0,
@@ -33,7 +30,14 @@ export default function SidePanel({ children, sx, ...other }) {
       }}
       {...other}
     >
-         <Grid xs={12} md={6} lg={4}>
+      <Grid
+        container
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        sx={{ height: '100%' }} // Ensure Grid takes up 100% height of Box
+      >
+        <Grid item xs={12} sx={{ height: '100%' }}> {/* Set Grid item height to 100% */}
           <AppCurrentVisits
             title="Views by Browser"
             chart={{
@@ -46,6 +50,7 @@ export default function SidePanel({ children, sx, ...other }) {
             }}
           />
         </Grid>
+      </Grid>
     </Box>
   );
 }
