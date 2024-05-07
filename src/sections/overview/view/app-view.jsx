@@ -29,7 +29,7 @@ export default function AppView() {
             total={1228}
             color="info"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_users.png" />}
-            style={{ backgroundColor: '#ffffff', color: "#000000", borderRadius: "0 0 16px 16px", height: "140px"}}
+            style={{ backgroundColor: '#ffffff', color: "#000000", borderRadius: "0 0 16px 16px", height: "160px"}}
           />
         </Grid>
 
@@ -39,7 +39,7 @@ export default function AppView() {
             total={6.92}
             color="warning"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_buy.png" />}
-            style={{ backgroundColor: '#ffffff', color: "#000000", borderRadius: "0 0 16px 16px", height: "140px"}}
+            style={{ backgroundColor: '#ffffff', color: "#000000", borderRadius: "0 0 16px 16px", height: "160px"}}
           />
         </Grid>
 
@@ -49,7 +49,7 @@ export default function AppView() {
             total={2.3}
             color="error"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_message.png" />}
-            style={{ backgroundColor: '#ffffff', color: "#000000", borderRadius: "0 0 16px 16px", height: "140px"}}
+            style={{ backgroundColor: '#ffffff', color: "#000000", borderRadius: "0 0 16px 16px", height: "160px"}}
           />
         </Grid>
 
