@@ -4,11 +4,10 @@ import Box from '@mui/material/Box';
 
 import { useResponsive } from 'src/hooks/use-responsive';
 
-import { NAV, HEADER } from './config-layout';
+import { NAV } from './config-layout';
 
 // ----------------------------------------------------------------------
 
-const SPACING = 8;
 
 export default function Main({ children, sx, ...other }) {
   const lgUp = useResponsive('up', 'lg');
@@ -21,10 +20,10 @@ export default function Main({ children, sx, ...other }) {
         minHeight: 1,
         display: 'flex',
         flexDirection: 'column',
-        py: `${HEADER.H_MOBILE + SPACING}px`,
+        py: 0,
         ...(lgUp && {
           px: 2,
-          py: `${HEADER.H_DESKTOP + SPACING}px`,
+          py: 0,
           width: `calc(100% - ${NAV.WIDTH}px)`,
         }),
         ...sx,

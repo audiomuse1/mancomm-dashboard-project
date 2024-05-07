@@ -1,13 +1,9 @@
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Unstable_Grid2';
 
-import Iconify from 'src/components/iconify';
-
-import AppTasks from '../app-tasks';
-import AppCurrentVisits from '../app-current-visits';
+import AppTopSummary from '../app-top-summary';
 import AppWebsiteVisits from '../app-website-visits';
 import AppWidgetSummary from '../app-widget-summary';
-import AppTrafficBySite from '../app-traffic-by-site';
 
 
 // ----------------------------------------------------------------------
@@ -23,6 +19,7 @@ export default function AppView() {
             total={2100}
             color="success"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_bag.png" />}
+            style={{ backgroundColor: '#6B75CA', color: "#ffffff", borderRadius: "0 0 16px 16px", height: "200px"}}
           />
         </Grid>
 
@@ -32,6 +29,7 @@ export default function AppView() {
             total={1228}
             color="info"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_users.png" />}
+            style={{ backgroundColor: '#ffffff', color: "#000000", borderRadius: "0 0 16px 16px", height: "140px"}}
           />
         </Grid>
 
@@ -41,6 +39,7 @@ export default function AppView() {
             total={6.92}
             color="warning"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_buy.png" />}
+            style={{ backgroundColor: '#ffffff', color: "#000000", borderRadius: "0 0 16px 16px", height: "140px"}}
           />
         </Grid>
 
@@ -50,13 +49,14 @@ export default function AppView() {
             total={2.3}
             color="error"
             icon={<img alt="icon" src="/assets/icons/glass/ic_glass_message.png" />}
+            style={{ backgroundColor: '#ffffff', color: "#000000", borderRadius: "0 0 16px 16px", height: "140px"}}
           />
         </Grid>
 
-        <Grid xs={12} md={6} lg={8}>
+        <Grid xs={12} md={6} lg={12}>
           <AppWebsiteVisits
-            title="Website Visits"
-            subheader="(+43%) than last year"
+            title="Sessions Overview"
+            subheader="01/15/19 - 01/28/19"
             chart={{
               labels: [
                 '01/01/2003',
@@ -73,19 +73,25 @@ export default function AppView() {
               ],
               series: [
                 {
-                  name: 'Team A',
-                  type: 'column',
+                  name: 'Americas',
+                  type: 'line',
                   fill: 'solid',
-                  data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30],
+                  data: [63, 31, 42, 57, 53, 42, 57, 51, 44, 22, 30],
                 },
                 {
-                  name: 'Team B',
-                  type: 'area',
-                  fill: 'gradient',
+                  name: 'Asia',
+                  type: 'line',
+                  fill: 'solid',
                   data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43],
                 },
                 {
-                  name: 'Team C',
+                  name: 'Europe',
+                  type: 'line',
+                  fill: 'solid',
+                  data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39],
+                },
+                {
+                  name: 'Africa',
                   type: 'line',
                   fill: 'solid',
                   data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39],
@@ -95,60 +101,48 @@ export default function AppView() {
           />
         </Grid>
 
-        <Grid xs={12} md={6} lg={4}>
-          <AppCurrentVisits
-            title="Views by Browser"
-            chart={{
-              series: [
-                { label: 'America', value: 4344 },
-                { label: 'Asia', value: 5435 },
-                { label: 'Europe', value: 1443 },
-                { label: 'Africa', value: 4443 },
-              ],
-            }}
+
+        <Grid xs={12} sm={6} md={3}>
+          <AppTopSummary
+            title="Top Platform"
+            total={2100}
+            color="success"
+            icon={<img alt="icon" src="/assets/icons/glass/ic_glass_bag.png" />}
           />
         </Grid>
 
-        <Grid xs={12} md={6} lg={4}>
-          <AppTrafficBySite
-            title="Traffic by Site"
-            list={[
-              {
-                name: 'FaceBook',
-                value: 323234,
-                icon: <Iconify icon="eva:facebook-fill" color="#1877F2" width={32} />,
-              },
-              {
-                name: 'Google',
-                value: 341212,
-                icon: <Iconify icon="eva:google-fill" color="#DF3E30" width={32} />,
-              },
-              {
-                name: 'Linkedin',
-                value: 411213,
-                icon: <Iconify icon="eva:linkedin-fill" color="#006097" width={32} />,
-              },
-              {
-                name: 'Twitter',
-                value: 443232,
-                icon: <Iconify icon="eva:twitter-fill" color="#1C9CEA" width={32} />,
-              },
-            ]}
+        <Grid xs={12} sm={6} md={3}>
+          <AppTopSummary
+            title="Top Sources"
+            total={1228}
+            color="info"
+            icon={<img alt="icon" src="/assets/icons/glass/ic_glass_users.png" />}
           />
         </Grid>
 
-        <Grid xs={12} md={6} lg={8}>
-          <AppTasks
-            title="Tasks"
-            list={[
-              { id: '1', name: 'Create FireStone Logo' },
-              { id: '2', name: 'Add SCSS and JS files if required' },
-              { id: '3', name: 'Stakeholder Meeting' },
-              { id: '4', name: 'Scoping & Estimations' },
-              { id: '5', name: 'Sprint Showcase' },
-            ]}
+        <Grid xs={12} sm={6} md={3}>
+          <AppTopSummary
+            title="Top Browser"
+            total={6.92}
+            color="warning"
+            icon={<img alt="icon" src="/assets/icons/glass/ic_glass_buy.png" />}
           />
         </Grid>
+
+        <Grid xs={12} sm={6} md={3}>
+          <AppTopSummary
+            title="Average Requests Received"
+            total={2.3}
+            color="error"
+            icon={<img alt="icon" src="/assets/icons/glass/ic_glass_message.png" />}
+          />
+        </Grid>
+
+
+
+
+
+        
       </Grid>
     </Container>
   );

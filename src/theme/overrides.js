@@ -26,6 +26,7 @@ export function overrides(theme) {
         '#root': {
           width: '100%',
           height: '100%',
+          backgroundColor: '#EFF2F8'
         },
         input: {
           '&[type=number]': {
